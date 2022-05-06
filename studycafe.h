@@ -30,7 +30,7 @@ void addEvent();
 void updateEvent();
 
 //시간대별 가격 보여주기
-void showPrice()
+void showPrice();
 
 void userImpendingEnd();
 //list
