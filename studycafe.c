@@ -19,7 +19,6 @@ int updateReseveration(Reseveration *s){
 }
 
 int deleteReseveration(Reseveration *s){
- 
     s->phone_no=-1;
     printf("==> 삭제됨!\n");
     return 0;
