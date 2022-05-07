@@ -40,6 +40,3 @@ int selectDataNo(Reseveration *s, int count);
 
 int selectMenu();
 
-© 2022 GitHub, Inc.
-Terms
-Privacy
