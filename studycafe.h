@@ -13,7 +13,7 @@ typedef struct{
 
 //function
 //CRUD
-int addReseveration(Reseveration*s);
+int addReseveration(Reseveration *s);
 void readReseveration(Reseveration s);
 int updateReseveration(Reseveration *s);
 int deleteReseveration(Reseveration *s);
@@ -32,6 +32,7 @@ void updateEvent();
 //시간대별 가격 보여주기
 void showPrice();
 
+//임박한 사용자 출력
 void userImpendingEnd();
 //list
 void list(Reseveration *s, int count);
