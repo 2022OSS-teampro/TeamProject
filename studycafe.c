@@ -2,7 +2,7 @@
 
 /*
 typedef struct{
-    // 1. 이름 2. 전화번호 뒷자리 3. 예약 자리 4. 예약 기간
+    // 1. 이름 2. 전화번호 뒷자리 3. 예약 자리 4. 예약 시간
     char name[20];
     int phone_no;
     char space[5]; // 예약자리 A-01 처럼
@@ -21,7 +21,7 @@ int addReseveration(Reseveration *s){
     printf("예약 자리: ");
     scanf(" %[^\n]s",s->space);
   
-    printf("예약 기간: ");
+    printf("예약 시간: ");
     scanf(" %[^\n]s",s->during);
   
     printf("==> 추가됨!\n");
@@ -43,7 +43,7 @@ int updateReseveration(Reseveration *s){
     printf("예약 자리: ");
     scanf(" %[^\n]s",s->space);
   
-    printf("예약 기간: ");
+    printf("예약 시간: ");
     scanf(" %[^\n]s",s->during);
   
     printf("==> 수정됨!\n");
