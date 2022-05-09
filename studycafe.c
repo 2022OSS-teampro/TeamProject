@@ -2,11 +2,9 @@
 
 /*
 typedef struct{
-<<<<<<< HEAD
+
     // 1. 이름 2. 전화번호 뒷자리 3. 예약 자리 4. 예약 기간
-=======
-    // 1. 이름 2. 전화번호 뒷자리 3. 예약 자리 4. 예약 시간
->>>>>>> c4fbb25603407eab7b07542f6f6555756f9c6040
+
     char name[20];
     int phone_no;
     char space[5]; // 예약자리 A-01 처럼
@@ -25,11 +23,8 @@ int addReseveration(Reseveration *s){
     printf("예약 자리: ");
     scanf(" %[^\n]s",s->space);
   
-<<<<<<< HEAD
+
     printf("예약 기간: ");
-=======
-    printf("예약 시간: ");
->>>>>>> c4fbb25603407eab7b07542f6f6555756f9c6040
     scanf(" %[^\n]s",s->during);
   
     printf("==> 추가됨!\n");
@@ -37,11 +32,7 @@ int addReseveration(Reseveration *s){
 };
 
 void readReseveration(Reseveration s){
-<<<<<<< HEAD
     printf("%s %d %s %s", s.name, s.phone_no, s.space, s.during);
-=======
-    printf("%s %d %s %s", s->name, s->phone_no, s->space, s->during);
->>>>>>> c4fbb25603407eab7b07542f6f6555756f9c6040
 };
 
 int updateReseveration(Reseveration *s){
@@ -68,7 +59,7 @@ int deleteReseveration(Reseveration *s){
     return 0;
 }
 
-<<<<<<< HEAD
+
 
 int selectMenu(){
     int menu;
@@ -82,5 +73,4 @@ int selectMenu(){
     scanf("%d", &menu);
     return menu;
 }
-=======
->>>>>>> c4fbb25603407eab7b07542f6f6555756f9c6040
+
