@@ -29,7 +29,7 @@ int addReseveration(Reseveration *s){
 };
 
 void readReseveration(Reseveration s){
-    printf("%s %d %s %s", s->name, s->phone_no, s->space, s->during);
+    printf("%s %d %s %s", s.name, s.phone_no, s.space, s.during);
 };
 
 int updateReseveration(Reseveration *s){
@@ -56,3 +56,16 @@ int deleteReseveration(Reseveration *s){
     return 0;
 }
 
+
+int selectMenu(){
+    int menu;
+    printf("=== 스터디 카페 예약 ===\n\n");
+    printf("1. 예약 추가\n");
+    printf("2. 에약 현황 보기\n");
+    printf("3. 예약 정보 수정\n");
+    printf("4. 예약 삭제\n");
+
+    printf("=> 선택할 메뉴? ");
+    scanf("%d", &menu);
+    return menu;
+}
