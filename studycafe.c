@@ -21,7 +21,7 @@ int addReseveration(Reseveration *s){
     printf("예약 자리: ");
     scanf(" %[^\n]s",s->space);
   
-    printf("예약 시간: ");
+    printf("예약 기간: ");
     scanf(" %[^\n]s",s->during);
   
     printf("==> 추가됨!\n");
@@ -29,7 +29,7 @@ int addReseveration(Reseveration *s){
 };
 
 void readReseveration(Reseveration s){
-    
+    printf("%s %d %s %s", s->name, s->phone_no, s->space, s->during);
 };
 
 int updateReseveration(Reseveration *s){
@@ -43,7 +43,7 @@ int updateReseveration(Reseveration *s){
     printf("예약 자리: ");
     scanf(" %[^\n]s",s->space);
   
-    printf("예약 시간: ");
+    printf("예약 기간: ");
     scanf(" %[^\n]s",s->during);
   
     printf("==> 수정됨!\n");
