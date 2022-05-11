@@ -12,6 +12,7 @@ typedef struct{
 }Reseveration;
 */
 
+//한결
 int addReseveration(Reseveration *s){
     printf("\n");
     printf("이름: ");
@@ -30,11 +31,12 @@ int addReseveration(Reseveration *s){
     printf("==> 추가됨!\n");
     return 1;
 };
-
+//한결
 void readReseveration(Reseveration s){
     printf("%s %d %s %s", s.name, s.phone_no, s.space, s.during);
 };
 
+//희송
 int updateReseveration(Reseveration *s){
     printf("\n");
     printf("이름: ");
@@ -53,14 +55,14 @@ int updateReseveration(Reseveration *s){
     return 1;
 }
 
+//희송 
 int deleteReseveration(Reseveration *s){
     s->phone_no=-1;
     printf("==> 삭제됨!\n");
     return 0;
 }
 
-
-
+//한결
 int selectMenu(){
     int menu;
     printf("=== 스터디 카페 예약 ===\n\n");
@@ -68,9 +70,34 @@ int selectMenu(){
     printf("2. 에약 현황 보기\n");
     printf("3. 예약 정보 수정\n");
     printf("4. 예약 삭제\n");
+    printf("5. 파일 저장\n");
+    printf("6. 파일 불러오기\n");
+    printf("7. 할인 이벤트\n");
+    printf("8. 가격 확인하기\n");
 
     printf("=> 선택할 메뉴? ");
     scanf("%d", &menu);
+
     return menu;
 }
+
+void saveData(Reseveration *s, int count);
+int loadData(Reseveration *s);
+void searchName(Reseveration *s, int count);
+
+//할인 이벤트 관련 기능
+void saleEventShow();
+int selectSaleNo();
+void addEvent();
+void updateEvent();
+
+//시간대별 가격 보여주기
+void showPrice();
+
+//임박한 사용자 출력
+void userImpendingEnd();
+//list
+void list(Reseveration *s, int count);
+//번호선택
+int selectDataNo(Reseveration *s, int count);
 
