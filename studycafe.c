@@ -85,7 +85,7 @@ void saveData(Reseveration *s, int count);
 int loadData(Reseveration *s);
 void searchName(Reseveration *s, int count);
 
-//할인 이벤트 관련 기능
+//할인 이벤트 관련 기능 --> 제가 이부분 하겠습니다!
 void saleEventShow();
 int selectSaleNo();
 void addEvent();
@@ -96,7 +96,7 @@ void showPrice();
 
 //임박한 사용자 출력
 void userImpendingEnd();
-//list
+//list --> 이부분도 제가 하겠습니다!
 void list(Reseveration *s, int count);
 //번호선택
 int selectDataNo(Reseveration *s, int count);
