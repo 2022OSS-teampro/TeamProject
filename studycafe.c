@@ -85,9 +85,21 @@ void saveData(Reseveration *s, int count);
 int loadData(Reseveration *s);
 void searchName(Reseveration *s, int count);
 
-//할인 이벤트 관련 기능 --> 제가 이부분 하겠습니다!
-void saleEventShow();
-int selectSaleNo();
+//할인 이벤트 관련 기능 --> 제가 이부분 하겠습니다!, 한결
+void saleEventShow(){
+}
+int selectSaleNo(){
+    int no;
+    printf("\n==== 현재 할인 이벤트 ====\n");
+    printf("\n<현재 할인 이벤트 상황>\n");
+    saleEventShow();
+    printf("1. 할인 이벤트 추가");
+    printf("2. 할인 이벤트 수정");
+    printf("0. menu로 돌아가기")
+
+    scanf("%[^\n]d", &no);
+    return no;
+}
 void addEvent();
 void updateEvent();
 
@@ -96,8 +108,10 @@ void showPrice();
 
 //임박한 사용자 출력
 void userImpendingEnd();
-//list --> 이부분도 제가 하겠습니다!
+
+//list --> 이부분도 제가 하겠습니다!,한결
 void list(Reseveration *s, int count);
+
 //번호선택
 int selectDataNo(Reseveration *s, int count);
 
