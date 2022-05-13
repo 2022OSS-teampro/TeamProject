@@ -10,6 +10,11 @@ typedef struct{
     char during[10]; // 05/12 까지 처럼 입력 
 }Reseveration;
 
+typedef struct{ //한결
+    //할인 이벤트 관련 구조체
+    char during[100];
+    int saleRate; // 할인율
+}Sale;
 
 //function
 //CRUD
