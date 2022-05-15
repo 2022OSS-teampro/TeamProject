@@ -22,29 +22,38 @@ int selectMenu(){
 
 int main(){
     int menu;
-    Reseveration s;
+    Reseveration s[100];
+    int index = 0;
+    Sale sales; // 할인 이벤트는 이벤트 기간 동안은 한 번만 하도록
 
     while (1){
         menu = selectMenu();
         if (menu == 0) break;
         if (menu == 1){
-            readReseveration(s);
+            addReseveration(&s[index++]);
         }
         else if (menu == 2){
-            addReseveration(&s);
+            if(index == 0){
+                printf("\n 예약 정보 없음 /n");
+                continue;
+            }
+            list(s, index);
         }
         else if (menu == 3){
-            updateReseveration(&s);
+            list(s, index);
         }
         else if (menu == 4){
-            deleteReseveration(&s);
+            list(s,index);
         }
         else if(menu==5)
+            printf("test\n");
         else if(menu==6)
+            printf("test\n");
         else if(menu==7){
-            saleEventShow();
+            int saleSelect = selectSaleNo();
         }
         else if(menu==8)
+            printf("test");
     }
     printf("\n 종료되었습니다! \n");
     return 0;
