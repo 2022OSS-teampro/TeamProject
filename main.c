@@ -25,6 +25,7 @@ int main(){
     Reseveration s[100];
     int index = 0;
     Sale sales; // 할인 이벤트는 이벤트 기간 동안은 한 번만 하도록
+    sales.isSale = 0;
 
     while (1){
         menu = selectMenu();
@@ -50,7 +51,14 @@ int main(){
         else if(menu==6)
             printf("test\n");
         else if(menu==7){
-            int saleSelect = selectSaleNo();
+            int saleSelect = selectSaleNo(&sales);
+            getchar();
+            if(saleSelect == 1)
+                sales.isSale = addEvent(&sales);
+            else if(saleSelect == 2)
+                sales.isSale = updateEvent(&sales);
+            else 
+                continue;
         }
         else if(menu==8)
             printf("test");

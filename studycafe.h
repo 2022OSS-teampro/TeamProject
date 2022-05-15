@@ -15,7 +15,7 @@ typedef struct{ //한결
     //할인 이벤트 관련 구조체
     char during[100];
     int saleRate; // 할인율
-    int isSale = 0;
+    int isSale;
 }Sale;
 
 //function
@@ -33,8 +33,8 @@ void searchName(Reseveration *s, int count);
 //할인 이벤트 관련 기능
 void saleEventShow();
 int selectSaleNo();
-void addEvent();
-void updateEvent();
+int addEvent();
+int updateEvent();
 
 //시간대별 가격 보여주기
 void showPrice();

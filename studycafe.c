@@ -34,7 +34,7 @@ int addReseveration(Reseveration *s){
 };
 //한결
 void readReseveration(Reseveration s){
-    printf("%s %d     %s    ~%s까지\n", s.name, s.phone_no, s.space, s.during);
+    printf("%s   %d     %s    ~%s까지\n", s.name, s.phone_no, s.space, s.during);
 };
 
 //희송
@@ -66,7 +66,7 @@ int deleteReseveration(Reseveration *s){
 //한결
 int selectMenu(){
     int menu;
-    printf("=== 스터디 카페 예약 ===\n\n");
+    printf("\n=== 스터디 카페 예약 ===\n\n");
     printf("1. 예약 추가\n");
     printf("2. 에약 현황 보기\n");
     printf("3. 예약 정보 수정\n");
@@ -74,7 +74,7 @@ int selectMenu(){
     printf("5. 파일 저장\n");
     printf("6. 파일 불러오기\n");
     printf("7. 할인 이벤트\n");
-    printf("8. 가격 확인하기\n");
+    printf("8. 가격 확인하기\n\n");
 
     printf("=> 선택할 메뉴? ");
     scanf("%d", &menu);
@@ -96,11 +96,11 @@ void userImpendingEnd();
 
 //list --> 이부분도 제가 하겠습니다!,한결
 void list(Reseveration *s, int count){
-    printf("\n  이름    전화번호    자리    예약 기간\n");
+    printf("\n 이름    전화번호    자리    예약 기간\n");
     for(int i = 0 ; i < count ; i++){
         if(s[i].phone_no == -1)
             continue;
-        printf("%2d ", i);
+        printf("%d ", i+1);
         readReseveration(s[i]);
     }
 }
