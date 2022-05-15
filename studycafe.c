@@ -73,8 +73,10 @@ int selectMenu(){
     printf("4. 예약 삭제\n");
     printf("5. 파일 저장\n");
     printf("6. 파일 불러오기\n");
-    printf("7. 할인 이벤트\n");
-    printf("8. 가격 확인하기\n\n");
+    printf("7. 예약자 이름 검색");
+    printf("8. 할인 이벤트\n");
+    printf("9. 가격 확인하기\n\n");
+    printf("10. 종료 임박한 사용자 출력");
 
     printf("=> 선택할 메뉴? ");
     scanf("%d", &menu);
@@ -92,7 +94,7 @@ void searchName(Reseveration *s, int count);
 void showPrice();
 
 //임박한 사용자 출력
-void userImpendingEnd();
+void userImpendingEnd(Reseveration *s);
 
 //list --> 이부분도 제가 하겠습니다!,한결
 void list(Reseveration *s, int count){
