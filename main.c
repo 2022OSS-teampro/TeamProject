@@ -30,12 +30,24 @@ int main(){
     int index = 0;
     Sale sales; // 할인 이벤트는 이벤트 기간 동안은 한 번만 하도록
     sales.isSale = 0;
+    
+    int menu;
+    int count = 0; //file에서 사용중
+
+    count = loadData(s);
+    index = count; 
 
     while (1){
         menu = selectMenu();
         if (menu == 0) break;
+        if(menu ==3 || menu == 4){	
+		    if (count == 0){ 
+                printf(" 데이터가 없습니다!\n");
+			    continue;
+			}
+		}
         if (menu == 1){
-            addReseveration(&s[index++]);
+            count+=addReseveration(&s[index++]); //count 사용해야 해서 수정했습니다
         }
         else if (menu == 2){
             if(index == 0){
@@ -45,17 +57,33 @@ int main(){
             list(s, index);
         }
         else if (menu == 3){
-            updateReseveration(&s[index++]);
+            int no = selectDataNo(s, index);
+            if(no==0){
+                printf("=>취소됨!");
+                continue;
+            }
+            updateReseveration(&s[no-1]);
         }
         else if (menu == 4){
-            deleteReseveration(&s[index++]);
+            int no = selectDataNo(s, index);
+            if(no == 0){
+                printf("=>취소됨!");
+                continue;
+            }
+            int deleteok;
+            printf("정말로 삭제하시겠습니까?(삭제:1)");
+            scanf("%d",&deleteok);
+            if(deleteok == 1){
+                if(deleteReseveration(&s[no-1])) count --;       
+           	 } 
         }
-        else if(menu==5)
-            saveData(&s[index++], index);
+        else if(menu == 5)
+            if (count == 0) printf("데이터가 없습니다!\n");
+		    else saveData(s, index);
         else if(menu==6)
-            loadData(&s[index++]);
+            loadData(s);
         else if(menu == 7){
-            searchName(&s[index++], index);
+            searchName(s, index);
         }
         else if(menu==8){
             int saleSelect = selectSaleNo(&sales);
