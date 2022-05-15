@@ -21,7 +21,8 @@ int addReseveration(Reseveration *s){
     printf("전화번호 뒷자리: ");
     scanf("%d",&s->phone_no);
 
-    printf("예약 자리: ");
+    
+    printf("예약 자리: \n");
     scanf(" %[^\n]s",s->space);
   
 
@@ -33,7 +34,7 @@ int addReseveration(Reseveration *s){
 };
 //한결
 void readReseveration(Reseveration s){
-    printf("%s %d %s %s", s.name, s.phone_no, s.space, s.during);
+    printf("%s %d     %s    ~%s까지\n", s.name, s.phone_no, s.space, s.during);
 };
 
 //희송
@@ -94,7 +95,15 @@ void showPrice();
 void userImpendingEnd();
 
 //list --> 이부분도 제가 하겠습니다!,한결
-void list(Reseveration *s, int count);
+void list(Reseveration *s, int count){
+    printf("\n  이름    전화번호    자리    예약 기간\n");
+    for(int i = 0 ; i < count ; i++){
+        if(s[i].phone_no == -1)
+            continue;
+        printf("%2d ", i);
+        readReseveration(s[i]);
+    }
+}
 
 //번호선택
 int selectDataNo(Reseveration *s, int count);
