@@ -14,7 +14,7 @@ void saleEventShow(Sale *s){
         return;
     }
     else{
-    printf("이벤트 기간 : %s\n", s->during);
+    printf("이벤트 기간 : ~ %s\n", s->during);
     printf("할인율 : %d%%\n\n", s->saleRate);
     }
 };
