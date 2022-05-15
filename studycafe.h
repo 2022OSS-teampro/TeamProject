@@ -15,6 +15,7 @@ typedef struct{ //한결
     //할인 이벤트 관련 구조체
     char during[100];
     int saleRate; // 할인율
+    int isSale = 0;
 }Sale;
 
 //function
