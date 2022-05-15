@@ -44,17 +44,17 @@ int main(){
             list(s, index);
         }
         else if (menu == 3){
-            list(s, index);
+            updateReseveration(&s[index++]);
         }
         else if (menu == 4){
-            list(s,index);
+            deleteReseveration(&s[index++]);
         }
         else if(menu==5)
-            printf("test\n");
+            saveData(&s[index++], index);
         else if(menu==6)
-            printf("test\n");
+            loadData(&s[index++]);
         else if(menu == 7){
-            printf("test\n");
+            searchName(&s[index++], index);
         }
         else if(menu==8){
             int saleSelect = selectSaleNo(&sales);
