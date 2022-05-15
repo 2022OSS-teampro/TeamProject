@@ -115,7 +115,7 @@ void list(Reseveration *s,int count){
 void saveData(Reseveration *s, int count){
     FILE *fp;
 
-    fp = fopen("list.txt","wt");
+    fp = fopen("reservation_list.txt","wt");
     for(int i = 0 ; i < count ; i++){
         fprintf(fp, "%s|%d|%s|%s",s[i].name,s[i].phone_no,s[i].space,s[i].during);
     }
