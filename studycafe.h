@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct{
     // 1. 이름 2. 전화번호 뒷자리 3. 예약 자리 4. 예약 기간
