@@ -88,13 +88,8 @@ void saveData(Reseveration *s, int count);
 int loadData(Reseveration *s);
 void searchName(Reseveration *s, int count);
 
-
-
 //시간대별 가격 보여주기
 void showPrice();
-
-//임박한 사용자 출력
-void userImpendingEnd(Reseveration *s);
 
 //list --> 이부분도 제가 하겠습니다!,한결
 void list(Reseveration *s, int count){

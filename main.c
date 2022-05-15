@@ -24,8 +24,6 @@ int selectMenu(){
 int main(){
     int menu;
     Reseveration s[100];
-    struct tm time_now = *localtime(&t);
-    time_now.
     int index = 0;
     Sale sales; // 할인 이벤트는 이벤트 기간 동안은 한 번만 하도록
     sales.isSale = 0;
@@ -68,7 +66,7 @@ int main(){
         }
         else if(menu==9)
             printf("test\n");
-            
+
         else if(menut == 10){
             printf("test\n");
         }

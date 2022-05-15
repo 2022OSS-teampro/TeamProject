@@ -39,7 +39,7 @@ int updateEvent();
 void showPrice();
 
 //임박한 사용자 출력
-void userImpendingEnd(Reseveration *s);
+
 //list
 void list(Reseveration *s, int count);
 //번호선택
