@@ -2,6 +2,7 @@
 
 /* 메뉴 번호보기위한 주석 --> 추후에 삭제할 것임
 int selectMenu(){
+    int menu;
     printf("\n=== 스터디 카페 예약 ===\n\n");
     printf("1. 예약 추가\n");
     printf("2. 에약 현황 보기\n");
@@ -22,7 +23,7 @@ int selectMenu(){
 */
 
 int main(){
-    int menu;
+ 
     Reseveration s[100];
     struct tm time_now = *localtime(&t);
     time_now.
