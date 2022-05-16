@@ -26,8 +26,12 @@ int main(){
  
     Reseveration s[100];
     int index = 0;
+    
     Sale sales; // 할인 이벤트는 이벤트 기간 동안은 한 번만 하도록
     sales.isSale = 0;
+    
+    Price price;
+    price.isDeafult = 1;
     
     int menu;
     int count = 0; //file에서 사용중
@@ -94,10 +98,10 @@ int main(){
                 continue;
         }
         else if(menu==9)
-            printf("test\n");
+            showPrice(&price , &sales);
 
         else if(menu == 10){
-            printf("test\n");
+            userImpendingEnd(s, count);
         }
     }
     printf("\n 종료되었습니다! \n");

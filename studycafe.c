@@ -167,7 +167,5 @@ void searchName(Reseveration *s, int count){
 }
 
 
-//Menu 8~
-void showPrice();
 
 
