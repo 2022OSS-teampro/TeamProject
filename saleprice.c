@@ -50,8 +50,10 @@ void showPrice(Price *price, Sale *sale){
     if(price->isDeafult == 1){
         printf("\n\t ***현재 가격 설정없음***\t\n\n");
         int isOkay = updatePrice(price);
-        if(isOkay == 1)
+        if(isOkay == 1){
             printf("=>가격 업데이트 완료!\n");
+            return;
+            }
         else{
             return;
         }
@@ -78,6 +80,13 @@ void showPrice(Price *price, Sale *sale){
             printf("월당 가격 : %d 원\n", price->price[3]);
         }
     }
+
+    int isOkay = updatePrice(price);
+        if(isOkay == 1)
+            printf("=>가격 업데이트 완료!\n");
+        else{
+            return;
+        }
 }
 
 int updatePrice(Price *price){
