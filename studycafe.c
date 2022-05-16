@@ -170,6 +170,4 @@ void searchName(Reseveration *s, int count){
 //Menu 8~
 void showPrice();
 
-//번호선택
-int selectDataNo(Reseveration *s, int count);
 
