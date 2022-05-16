@@ -49,7 +49,7 @@ int main(){
         }
         else if (menu == 2){
             if(index == 0){
-                printf("\n 예약 정보 없음 /n");
+                printf("\n 예약 정보 없음 \n");
                 continue;
             }
             list(s, index);
@@ -96,7 +96,7 @@ int main(){
         else if(menu==9)
             printf("test\n");
 
-        else if(menut == 10){
+        else if(menu == 10){
             printf("test\n");
         }
     }
