@@ -25,7 +25,7 @@ int selectMenu(){
     printf("7. 예약자 이름 검색\n");
     printf("8. 할인 이벤트\n");
     printf("9. 가격 확인하기\n");
-    printf("10. 종료 임박한 사용자 출력\n");
+    printf("10. 종료 임박한 사용자 출력\n\n");
 
     printf("=> 선택할 메뉴? ");
     scanf("%d", &menu);

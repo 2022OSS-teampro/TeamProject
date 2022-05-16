@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct{
     // 1. 이름 2. 전화번호 뒷자리 3. 예약 자리 4. 예약 기간
@@ -20,7 +21,7 @@ typedef struct{ //한결
 //function
 //CRUD
 int addReseveration(Reseveration *s);
-void readReseveration(Reseveration s);
+void readReseveration(Reseveration *s);
 int updateReseveration(Reseveration *s);
 int deleteReseveration(Reseveration *s);
 //파일 저장 /불러오기
@@ -47,3 +48,10 @@ int selectDataNo(Reseveration *s, int count);
 
 int selectMenu();
 
+
+
+int calculatorTime(char duration[], struct tm currentTime);
+int isOkayDuration(int gapOfTime);
+
+//임박한 사용자 출력
+void userImpendingEnd(Reseveration *s);
